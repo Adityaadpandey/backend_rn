@@ -15,7 +15,9 @@ app.get('/', (req, res) => {
 })
 // app.use('/api/auth',require('./routes/auth'))
 
-app.use('/api/note',require('./router/Note'))
+app.use('/api/note', require('./router/Note'))
+app.use('/api/user', require('./router/auth'))
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
