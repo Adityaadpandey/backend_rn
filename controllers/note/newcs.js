@@ -1,6 +1,6 @@
-const Note = require('../../models/note');
+const Note = require('../../models/note2');
 
-const add = async (req, res) => {
+const add2 = async (req, res) => {
     try {
       const {
         id,
@@ -37,4 +37,4 @@ const add = async (req, res) => {
     }
 }
   
-module.exports = add;
+module.exports = add2;

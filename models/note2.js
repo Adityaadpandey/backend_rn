@@ -20,5 +20,5 @@ const NoteSchema = new Schema({
 
 
 })
-const PyNote = mongoose.model('PyNote', NoteSchema);
-module.exports = PyNote;
+const CssNote = mongoose.model('CssNote', NoteSchema);
+module.exports = CssNote;
