@@ -1,4 +1,4 @@
-const Note = require('../../models/note');
+const PyNote = require('../../models/note');
 
 const add = async (req, res) => {
     try {
@@ -16,7 +16,7 @@ const add = async (req, res) => {
       // if (!errors.isEmpty()) {
       //   return res.status(400).json({ errors: errors.array() });
       // }
-      const note = new Note({
+      const note = new PyNote({
           id,
           title,
         content,

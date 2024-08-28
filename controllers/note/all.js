@@ -1,8 +1,8 @@
-const Note = require('../../models/note');
+const PyNote = require('../../models/note');
 
 const get = async (req, res) => {
     try {
-      const note = await Note.find({});
+      const note = await PyNote.find({});
       res.json(note);
       ``;
     } catch (error) {

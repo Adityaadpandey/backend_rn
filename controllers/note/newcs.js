@@ -1,4 +1,4 @@
-const Note = require('../../models/note2');
+const CssNote = require('../../models/note2');
 
 const add2 = async (req, res) => {
     try {
@@ -16,7 +16,7 @@ const add2 = async (req, res) => {
       // if (!errors.isEmpty()) {
       //   return res.status(400).json({ errors: errors.array() });
       // }
-      const note = new Note({
+      const note = new CssNote({
           id,
           title,
         content,

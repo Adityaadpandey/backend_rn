@@ -1,8 +1,8 @@
-const Note = require('../../models/note');
+const CssNote = require('../../models/note');
 
 const get2 = async (req, res) => {
     try {
-      const note = await Note.find({});
+      const note = await CssNote.find({});
       res.json(note);
       ``;
     } catch (error) {
