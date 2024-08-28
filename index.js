@@ -11,7 +11,7 @@ app.use(cors())
 
 //  Avialable Route
 app.get('/', (req, res) => {
-  res.send('Hello Owner of aroma')
+  res.send('Hello Owner ')
 })
 // app.use('/api/auth',require('./routes/auth'))
 

@@ -10,14 +10,14 @@ const add = async (req, res) => {
       } = req.body;
   
       // If there are errors, return Bad request and the errors
-      const errors = validationResult(req);
-      if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-      }
+      // const errors = validationResult(req);
+      // if (!errors.isEmpty()) {
+      //   return res.status(400).json({ errors: errors.array() });
+      // }
       const note = new Note({
           id,
           title,
-          content,
+          content
       });
       const savedNote = await note.save();
   
