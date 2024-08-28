@@ -1,4 +1,4 @@
-const CssNote = require('../../models/note');
+const CssNote = require('../../models/note2');
 
 const get2 = async (req, res) => {
     try {
