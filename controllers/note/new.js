@@ -1,4 +1,4 @@
-const PyNote = require('../../models/note');
+const Note = require('../../models/note');
 
 const add = async (req, res) => {
     try {
@@ -12,11 +12,11 @@ const add = async (req, res) => {
       } = req.body;
   
       // If there are errors, return Bad request and the errors
-      // const errors = validationResult(req);
-      // if (!errors.isEmpty()) {
-      //   return res.status(400).json({ errors: errors.array() });
-      // }
-      const note = new PyNote({
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+      }
+      const note = new Note({
           id,
           title,
         content,
