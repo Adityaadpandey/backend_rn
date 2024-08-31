@@ -27,7 +27,7 @@ const loged = async (req, res) => {
 
     // Generating a unique avatar URL using Dicebear
     const seed = Math.floor(Math.random() * 5000);
-    const img = `https://avatars.dicebear.com/api/adventurer-neutral/${seed}.svg`;
+    const img = `https://api.dicebear.com/9.x/pixel-art/svg?seed={seed}`;
 
     // Creating the user and storing it in the database
     user = await User.create({
