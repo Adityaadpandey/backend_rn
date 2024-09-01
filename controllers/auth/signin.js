@@ -26,9 +26,10 @@ const loged = async (req, res) => {
     const nPass = await bcrypt.hash(password, salt);
 
     // Generating a unique avatar URL using Dicebear
-    const seed = Math.floor(Math.random() * 5000);
-    const img = `https://api.dicebear.com/9.x/pixel-art/svg?seed={seed}`;
-
+    // const seed = Math.floor(Math.random() * 5000);
+    const img = `https://robohash.org/${email}.pnf`;
+    // https://api.dicebear.com/9.x/pixel-art/svg//${seed}.svg`;
+    // https://api.dicebear.com/9.x/pixel-art/svg/4566
     // Creating the user and storing it in the database
     user = await User.create({
       name: req.body.name,

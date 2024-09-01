@@ -6,7 +6,7 @@ const add = async (req, res) => {
         id,
         title,
         content,
-        category,
+        // category,
         // user
         
       } = req.body;
