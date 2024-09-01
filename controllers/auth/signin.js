@@ -27,7 +27,7 @@ const loged = async (req, res) => {
 
     // Generating a unique avatar URL using Dicebear
     // const seed = Math.floor(Math.random() * 5000);
-    const img = `https://robohash.org/${email}.pnf`;
+    const img = `https://robohash.org/${req.body.email}.png`;
     // https://api.dicebear.com/9.x/pixel-art/svg//${seed}.svg`;
     // https://api.dicebear.com/9.x/pixel-art/svg/4566
     // Creating the user and storing it in the database
