@@ -8,7 +8,7 @@ const add = async (req, res) => {
         
         title,
         content,
-        // category,
+        category,
         // user
         
       } = req.body;
@@ -22,7 +22,7 @@ const add = async (req, res) => {
           
           title,
         content,
-          // category,
+          category,
           // user: req.user.id,
         //   user: req.user._id,
       });

@@ -7,6 +7,11 @@ const NoteSchema = new Schema({
         default: () => new mongoose.Types.ObjectId(),
         unique: true,
     },
+    category: {
+        type: String,
+        required: true,
+        // enum: ['work', 'personal', 'family']
+    },
     title: {
         type: String,
         required: true,

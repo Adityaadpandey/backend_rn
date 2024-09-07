@@ -1,8 +1,11 @@
 const Note = require('../../models/note');
 
 const get = async (req, res) => {
-    try {
-      const note = await Note.find({});
+  try {
+    const { category } = req.query; // Get the category from the query parameters
+
+    const note = await Note.find({ category });
+      // const note = await Note.find({});
       res.json(note);
       ``;
     } catch (error) {
