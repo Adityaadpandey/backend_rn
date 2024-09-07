@@ -1,4 +1,6 @@
 const Note = require('../../models/note');
+const { validationResult } = require('express-validator')
+
 
 const add = async (req, res) => {
     try {
@@ -20,7 +22,7 @@ const add = async (req, res) => {
           id,
           title,
         content,
-          category,
+          // category,
           // user: req.user.id,
         //   user: req.user._id,
       });

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const auth = require('../middleware/auth');
+var fetchUser = require("../middleware/fetchUser");
 const multer = require('multer');
 const File = require('../models/File');
 
@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // Upload a file
-router.post('/upload', auth, upload.single('file'), async (req, res) => {
+router.post('/upload', fetchUser, upload.single('file'), async (req, res) => {
   try {
     const newFile = new File({
       user: req.user.id,
@@ -32,7 +32,7 @@ router.post('/upload', auth, upload.single('file'), async (req, res) => {
 });
 
 // Download a file
-router.get('/download/:id', auth, async (req, res) => {
+router.get('/download/:id', fetchUser, async (req, res) => {
   try {
     const file = await File.findById(req.params.id);
     res.download(file.path, file.filename);
