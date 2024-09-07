@@ -5,7 +5,7 @@ const { validationResult } = require('express-validator')
 const add = async (req, res) => {
     try {
       const {
-        id,
+        
         title,
         content,
         // category,
@@ -19,7 +19,7 @@ const add = async (req, res) => {
         return res.status(400).json({ errors: errors.array() });
       }
       const note = new Note({
-          id,
+          
           title,
         content,
           // category,
