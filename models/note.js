@@ -10,7 +10,10 @@ const NoteSchema = new Schema({
     category: {
         type: String,
         required: true,
-        // enum: ['work', 'personal', 'family']
+    },
+    sub_category: {
+        type: String,
+        required: true,
     },
     title: {
         type: String,

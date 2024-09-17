@@ -1,4 +1,4 @@
-const Note = require('../../models/note');
+const Quiz = require('../../models/Quiz');
 const { validationResult } = require('express-validator')
 
 
@@ -6,10 +6,11 @@ const add = async (req, res) => {
   try {
     const {
 
-      title,
-      content,
+      question,
+      options,
+      correctAnswer,
       category,
-      sub_category,
+      sub_category
       // user
 
     } = req.body;
@@ -19,10 +20,11 @@ const add = async (req, res) => {
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    const note = new Note({
+    const note = new Quiz({
 
-      title,
-      content,
+      question,
+      options,
+      correctAnswer,
       category,
       sub_category
       // user: req.user.id,

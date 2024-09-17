@@ -2,26 +2,26 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const UserSchema = new Schema({
-    name:{
-        type: 'string',
+    name: {
+        type: String,
         required: true,
         unique: true
     },
     img: {
-        type: 'string',
+        type: String,
         required: true,
     },
     email: {
-        type: 'string',
-        required : true,
-        unique : true,
+        type: String,
+        required: true,
+        unique: true,
     },
-    password:{
-        type: 'string',
-        required : true,
+    password: {
+        type: String,
+        required: true,
     },
-    resetToken:{
-    type: 'string',
+    resetToken: {
+        type: String,
         default: null
     },
     expireToken: {
@@ -29,22 +29,22 @@ const UserSchema = new Schema({
         default: null
     },
     last_payment: {
-        type: 'string',
+        type: String,
         default: null,
     },
     next_payment: {
-        type: 'string',
+        type: String,
         default: null,
     },
     google_token: {
-        type: 'string',
+        type: String,
         default: null,
     },
-    date:{
+    date: {
         type: Date,
         default: Date.now,
     }
 
 })
-const User = mongoose.model('User',UserSchema);
+const User = mongoose.model('User', UserSchema);
 module.exports = User;

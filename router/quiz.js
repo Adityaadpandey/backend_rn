@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
-const get = require("../controllers/note/all");
-const add = require("../controllers/note/new");
-const category = require("../controllers/note/category");
-const sub_category = require("../controllers/note/sub_category");
+const get = require("../controllers/quiz/all");
+const add = require("../controllers/quiz/new");
+const category = require("../controllers/quiz/category");
+const sub_category = require("../controllers/quiz/sub_category");
 
 
 

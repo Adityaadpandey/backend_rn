@@ -1,4 +1,4 @@
-const Note = require('../../models/note');
+const Quiz = require('../../models/Quiz');
 
 const get = async (req, res) => {
   try {
@@ -16,7 +16,7 @@ const get = async (req, res) => {
       query.sub_category = sub_category;
     }
 
-    const notes = await Note.find(query);
+    const notes = await Quiz.find(query);
     res.json(notes);
   } catch (error) {
     console.error(error.message);
